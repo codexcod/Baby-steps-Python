@@ -62,15 +62,44 @@ def calcularDistancia(n1,n2):
     return distancia
 
 
+def pedirPerimetroCirculo():
+
+    print("Calcular el perimetro deun circulo: ")
+    perimetro = calcularPerimetroCirculo(int(input("Inserte el radio del circulo ")))
+    print (f"El perimetro es {perimetro}")
+
+    cargarFunciones()
+
+def calcularPerimetroCirculo(radio):    
+    diametro = radio * 2
+    perimetro = diametro * 3,14
+    return perimetro
+
+def pedirAreaCirculo():
+    print("Calcular el area deun circulo: ")
+    area = calcularAreaCirculo(int(input("Inserte el radio del circulo ")))
+    print (f"El area es {area}")
+
+    cargarFunciones()
+
+def calcularAreaCirculo(radio):    
+    cuadrado = radio * radio
+    area = cuadrado * 3,14
+    return area
+
+
+
 
 def cargarFunciones():
     opcion = int(input("""
 
-    Seleccione la funcion a utilizar:"
+    Seleccione la funcion a utilizar:
 
 1.Calcular perimetro
 2.Calcular area
 3.Calcular area con ejes
+4.Calcular perimetro de un circulo
+5.Calcular area de un circulo
 
 """))
     if opcion == 1:
@@ -79,7 +108,10 @@ def cargarFunciones():
         pedirArea()
     elif opcion == 3:
         pedirAreaEjes()
-
+    elif opcion ==4:
+        pedirPerimetroCirculo()
+    elif opcion ==5:
+        pedirAreaCirculo()
 
 cargarFunciones()
 
