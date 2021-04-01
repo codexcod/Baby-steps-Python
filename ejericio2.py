@@ -64,7 +64,7 @@ def calcularDistancia(n1,n2):
 
 def pedirPerimetroCirculo():
 
-    print("Calcular el perimetro deun circulo: ")
+    print("Calcular el perimetro de un circulo: ")
     perimetro = calcularPerimetroCirculo(int(input("Inserte el radio del circulo ")))
     print (f"El perimetro es {perimetro}")
 
@@ -76,7 +76,7 @@ def calcularPerimetroCirculo(radio):
     return perimetro
 
 def pedirAreaCirculo():
-    print("Calcular el area deun circulo: ")
+    print("Calcular el area de un circulo: ")
     area = calcularAreaCirculo(int(input("Inserte el radio del circulo ")))
     print (f"El area es {area}")
 
@@ -88,11 +88,36 @@ def calcularAreaCirculo(radio):
     return area
 
 
+def pedirVolumenEsfera():
+    print("Calcular el volumen de una esfera: ")
+    volumen = calcularVolumenEsfera(int(input("Inserte el radio de la esfera ")))
+    print (f"El volumen es {volumen}")
 
+    cargarFunciones()
+
+def calcularVolumenEsfera(radio):
+    cubo = radio * radio * radio
+    volumen = (4/3) * cubo * 3,14
+    return volumen
+
+
+def pedirHipotenusa():
+    print("Calcular la hipotenusa dados los catetos 1 y 2: ")
+    c1 = int(input("Inserte el cateto numero 1 "))
+    c2 = int(input("Inserte el cateto numero 2 "))
+
+    print (f"La hipotenusa es {calcularHipotenusa(c1, c2)}")
+
+    cargarFunciones()
+
+def calcularHipotenusa(c1,c2):
+    
+    hipotenusa = (c1 ** 2+c2 **2)**(1/2)
+    return hipotenusa
+ 
 
 def cargarFunciones():
     opcion = int(input("""
-
     Seleccione la funcion a utilizar:
 
 1.Calcular perimetro
@@ -100,6 +125,8 @@ def cargarFunciones():
 3.Calcular area con ejes
 4.Calcular perimetro de un circulo
 5.Calcular area de un circulo
+6.Calcular volumen de una esfera
+7.Calcular la hipotenusa teniendo en cuenta 2 catetos 
 
 """))
     if opcion == 1:
@@ -112,6 +139,10 @@ def cargarFunciones():
         pedirPerimetroCirculo()
     elif opcion ==5:
         pedirAreaCirculo()
+    elif opcion ==6:
+        pedirVolumenEsfera()
+    elif opcion ==7:
+        pedirHipotenusa()()
 
 cargarFunciones()
 
