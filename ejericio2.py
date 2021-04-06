@@ -1,6 +1,8 @@
 
 def pedirPerimetro():
 
+    #Pide el perimetro de un rectangulo#
+
     print("Calcular el perimetro de un rectangulo")
 
     perimetro = calcularPerimetro(int(input("Ingrese la base del rectangulo ")),int(input("Ingrese la altura del rectangulo ")))
@@ -12,11 +14,14 @@ def pedirPerimetro():
 
 
 def calcularPerimetro(base, altura):
+    #Calcula el perimetro de un rectangulo dada una base y una altura#
 
     perimetro = base * 2 + altura * 2
     return perimetro
 
 def pedirArea():
+
+    #Pide el area de un rectangulo#
 
     print("Calcular el area de un rectangulo")
     area = calcularArea(int(input("Ingrese la base del rectangulo ")),int(input("Ingrese la altura del rectangulo ")))
@@ -26,12 +31,16 @@ def pedirArea():
 
 
 def calcularArea(base,altura):
+    # Calcula el area de un rectangulo dada una base y una altura#
 
     area = base * altura
     return area
 
 
 def pedirAreaEjes():
+
+    # Pide el area de un rectangulo teniendo en cunta 4 ejes#
+
     print("Calcular el area de un rectangulo teniendo en cuenta los ejes x1, x2 , y1 e y2")
     print("ingrese los valores para la coordenada x")
     x1 = int(input("ingrese el valor de x1:"))
@@ -45,7 +54,7 @@ def pedirAreaEjes():
 
 
 def calcularAreaEjes(x1,x2,y1,y2):
-    
+    # Calcula el area de un rectangulo dados 4 ejes#
     base = calcularDistancia(x1,x2)
     altura = calcularDistancia(y1, y2)
 
@@ -54,6 +63,8 @@ def calcularAreaEjes(x1,x2,y1,y2):
     return area
     
 def calcularDistancia(n1,n2):
+    #Calcula la distancia entre dos puntos#
+
     distancia = 0
     if abs(n1)> abs(n2):
         distancia = abs(n1)-abs(n2)
@@ -64,32 +75,45 @@ def calcularDistancia(n1,n2):
 
 def pedirPerimetroCirculo():
 
+    # Pide el perimetro de un circulo#
+
     print("Calcular el perimetro de un circulo: ")
     perimetro = calcularPerimetroCirculo(int(input("Inserte el radio del circulo ")))
     print (f"El perimetro es {perimetro}")
 
     cargarFunciones()
 
-def calcularPerimetroCirculo(radio):    
+def calcularPerimetroCirculo(radio):
+
+    # Calcula el perimetro de un circulo dado su radio#
+
     diametro = radio * 2
     perimetro = diametro * 3,14
     return perimetro
 
 def pedirAreaCirculo():
-    #pide el area de un circulo#
+
+    #Pide el area de un circulo#
+
     print("Calcular el area de un circulo: ")
     area = calcularAreaCirculo(int(input("Inserte el radio del circulo ")))
     print (f"El area es {area}")
 
     cargarFunciones()
 
-def calcularAreaCirculo(radio):    
+def calcularAreaCirculo(radio):
+
+    #Calcula el area de un circulo dado su radio#
+
     cuadrado = radio * radio
     area = cuadrado * 3,14
     return area
 
 
 def pedirVolumenEsfera():
+
+    #Pide el volumen de una esfera#
+
     print("Calcular el volumen de una esfera: ")
     volumen = calcularVolumenEsfera(int(input("Inserte el radio de la esfera ")))
     print (f"El volumen es {volumen}")
@@ -97,12 +121,18 @@ def pedirVolumenEsfera():
     cargarFunciones()
 
 def calcularVolumenEsfera(radio):
+
+    #calcula el volumen de una esfera dado su radio#
+
     cubo = radio * radio * radio
     volumen = (4/3) * cubo * 3,14
     return volumen
 
 
 def pedirHipotenusa():
+
+    #Pide la hipotenusa dados sus dos catetos#
+
     print("Calcular la hipotenusa dados los catetos 1 y 2: ")
     c1 = int(input("Inserte el cateto numero 1 "))
     c2 = int(input("Inserte el cateto numero 2 "))
@@ -112,12 +142,17 @@ def pedirHipotenusa():
     cargarFunciones()
 
 def calcularHipotenusa(c1,c2):
-    
+
+    # Calcula la hipotenusa dados sus dos catetos#
+
     hipotenusa = (c1 ** 2+c2 **2)**(1/2)
     return hipotenusa
  
 
 def cargarFunciones():
+
+    #Funcion que funciona como menu para llamar las demas funciones#
+
     opcion = int(input("""
     Seleccione la funcion a utilizar:
 
@@ -128,6 +163,7 @@ def cargarFunciones():
 5.Calcular area de un circulo
 6.Calcular volumen de una esfera
 7.Calcular la hipotenusa teniendo en cuenta 2 catetos 
+
 
 """))
     if opcion == 1:
