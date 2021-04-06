@@ -76,6 +76,7 @@ def calcularPerimetroCirculo(radio):
     return perimetro
 
 def pedirAreaCirculo():
+    #pide el area de un circulo#
     print("Calcular el area de un circulo: ")
     area = calcularAreaCirculo(int(input("Inserte el radio del circulo ")))
     print (f"El area es {area}")
