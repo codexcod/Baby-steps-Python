@@ -1,18 +1,18 @@
 <h1 align ="center">
    
-<img src="https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" width=400 height=400>
+<img src="https://media2.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" width=300 height=300>
 
 </h1>
 
 <h1 align ="center">
    
-<img src="https://i.imgur.com/DfQqM.gif" width=100 height=100>
+<img src="https://i.imgur.com/DfQqM.gif" width=200 height=200>
 
 </h1>
 
 <h1 align ="center">
    
-<img src="https://phoneky.co.uk/thumbs/screensavers/down/anime/charmander_rh0UXUlh.gif" width=100 height=100>
+<img src="https://phoneky.co.uk/thumbs/screensavers/down/anime/charmander_rh0UXUlh.gif" width=200 height=200>
 
 </h1>
 
