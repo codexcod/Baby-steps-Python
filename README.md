@@ -1,3 +1,9 @@
+<h1 align ="center">
+   
+<img src="https://i.imgur.com/DfQqM.gif" width=400 height=400>
+
+</h1>
+
 <h1 align="center">Ejercicios con Python</h1>
 
 __NOTA:__ La implementación también se debe documentar, con ___comentarios___ dentro y fuera del código, al respecto de qué hace el programa, cómo lo hace y por qué lo hace de esa forma.
