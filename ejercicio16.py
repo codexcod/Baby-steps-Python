@@ -12,6 +12,7 @@ devolver 'vistaerou'.
 
 
 def mostrarConsonantes(palabra):
+    """" de una palabra o frase saca todas las vocales y deja las consonantes"""
     resultado = ""
     for i in palabra:
         if not i in "aeiouAEIOU":
@@ -19,10 +20,28 @@ def mostrarConsonantes(palabra):
     return resultado
 
 def mostrarVocales(palabra):
+    """" de una palabra o frase saca todas las consonantes y deja las vocales"""
     resultado = ""
     for i in palabra:
         if i in "aeiouAEIOU":
             resultado += i
     return resultado
 
-print(mostrarVocales("sin consonantes"))
+def moverVocales(palabra):
+    """"mueve las vocales una para adelante. Ejemplo: a va a pasar a ser e"""
+    vocales = ["a", "e", "i", "o", "u"]
+    for letra in palabra:
+        if letra in "aeiouAEIOU":
+            for i in range (0,4):
+                if letra == vocales[i]:
+                    palabra = palabra.replace(letra,vocales[i+1])
+            if(letra == "u"):
+                palabra = palabra.replace(letra, vocales[0])
+
+    return palabra
+
+
+def esCapicua(palabra):
+    """"devuelve true o false dependiendo si es capicua"""
+    return  palabra == palabra[::-1]
+
