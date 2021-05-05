@@ -10,9 +10,11 @@ para este ejercicio, una función que llame a la anterior varias veces.
 
 
 def convertirFarenheitCelsius(grados):
-    """Dada una cantidad de grados Farenheit lso convierte a grados celcius"""
+    """Recibe:
+                   grados:<int>
+               Devuelve la cantidad de grados farenheit en celcius"""
     resultado = (grados-32)/(9/5)
-    return resultado
+    return "{0:.2f}".format(resultado)
 
 
 def generarTabla():
@@ -23,4 +25,4 @@ def generarTabla():
 
     return tabla
 
-
+print(generarTabla())
