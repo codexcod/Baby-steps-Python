@@ -9,7 +9,10 @@ vez mayor, utilizando la función sleep del módulo time.
 ingresó o no la contraseña correctamente, mediante un valor booleano (True o False). """
 
 def validarContraseña(contraseña):
-    """Verifica que la contraseña sea correcta"""
+    """Recibe:
+                   contraseña:<str>
+
+               Devuelve si verdadero o falso dependiendo si la contraseña es correcta o no"""
     return contraseña == "contraseña123@"
 
 
