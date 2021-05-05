@@ -26,7 +26,10 @@ cantidad de aciertos y la de coincidencias, y se le pide una nueva propuesta. Es
 repite hasta que el jugador adivine el código."""
 
 def esValido(numero):
-    """Chequea que el numero ingresado sea valido"""
+    """Recibe:
+                   numero:<int>
+
+               Devuelve verdadero o falso dependiendo si el numero tiene el formato correcto"""
     n = str(numero)
     if n.isdigit():   
         
@@ -52,11 +55,19 @@ def generarNumero():
     return numero
 
 def compararNumeros(numero1,numero2):
-    """devuelve si el numero uno es igual al segundo"""
+    """Recibe:
+                       numero1:<int>
+                       numero2:<int>
+
+                   Devuelve si el numero uno es igual al segundo"""
     return str(numero1) == str(numero2)
 
 def pedirNumero(numero):
-    """Pide un numero hasta que se ingrese uno valido"""
+    """Recibe:
+                         numero1:<int>
+
+
+                     Pide un numero hasta que se ingrese uno valido"""
     while not esValido(numero):
         print("Ingrese un numero valido")
         numero = input("Ingrese un numero ")
