@@ -4,7 +4,11 @@ Nota: Por ejemplo, la versión capitalizada de la palabra “programar” es
 “PROGRAMAR”."""
 
 def esCpaitalizada(palabra1,palabra2):
-    """Compara si la primera palabra es la version capitalizada de la segunda"""
+    """Recibe:
+                   palabra1:<str>
+                   palabra2:<str>
+
+               Devuelve verdadero o falso dependiendo si la palabra 1 es la version capitalizada de la palabra 2"""
     return palabra1 == palabra2.upper()
 
 
