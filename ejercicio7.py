@@ -8,8 +8,12 @@
 6. Dada una fecha, indicar la cantidad de días transcurridos en ese año hasta esa fecha.
 7. Dadas dos fechas (día1, mes1, año1, día2, mes2, año2), indicar el tiempo transcurrido entre ambas, en años, meses y días."""
 
+
 def calcularBiciesto(anio):
-    """Caclula si un año es biciesto"""
+    """Recibe:
+                   anio:<int>
+
+               Devuelve verdadero o falso dependiendo si el año dado es biciesto"""
     if (anio % 4 == 0):
         if(anio % 100 == 0):
             return  anio // 400 == 0
@@ -19,8 +23,13 @@ def calcularBiciesto(anio):
     else:
         return False
 
+
 def cantidadDiasMes(mes,año):
-    """Caclcula la cantidad de dias que tiene un mes y tiene en cuenta si es biciesto"""
+    """Recibe:
+                   mes:<int>/<str>
+                   año:<int>
+
+               Devuelve la cantidad de dias que tiene un mes teniendo en cuenta si es biciesto"""
     dias = []
     if(calcularBiciesto(año)):
         dias = [31,28,31,30,31,30,31,31,30,31,30,31]
@@ -36,19 +45,39 @@ def cantidadDiasMes(mes,año):
                 return dias[i]
 
 
+
 def esValido(dia,mes,año):
-    """Devuelve True or False dependiendo si la fecha es valida"""
+    """Recibe:
+                   dia:<int>
+                   mes:<int>
+                   año:<int>
+
+               Devuelve verdadero o falso dependiendo si la fecha es valida o no"""
     return mes >= 0 and mes <= 12 and dia >= 0 and dia <= cantidadDiasMes(mes,año)
 
+
+
 def cuantosDiasFaltanMes(dia,mes,año):
-    """Calcula la cantidad de dias que faltan para terminar el mes"""
+    """Recibe:
+                   dia:<int>
+                   mes:<int>
+                   año:<int>
+
+               Devuelve la cantidad de dias que faltan para terminar el mes dada una fecha determinada"""
     if (esValido(dia,mes,año)):
         return cantidadDiasMes(mes,año)-dia
     else:
         return "La fecha no es valida"
 
+
+
 def cuantosDiasFaltanAño(dia,mes,año):
-    """Caclula la cantidad de dias que faltan para terminar el año"""
+    """Recibe:
+                   dia:<int>
+                   mes:<int>
+                   año:<int>
+
+               Devuelve la cantidad de dias que faltan para terminar el año dada una fecha determinada"""
     if (esValido(dia,mes,año)):
         dias = cuantosDiasFaltanMes(dia, mes, año)
         for i in range(mes,12):
@@ -59,8 +88,14 @@ def cuantosDiasFaltanAño(dia,mes,año):
         return "La fecha no es valida"
 
 
+
 def cuantosDiasVanAño(dia,mes,año):
-    """Caclula la cantidad de dias que pasaron en el año"""
+    """Recibe:
+                   dia:<int>
+                   mes:<int>
+                   año:<int>
+
+               Devuelve la cantidad de dias que pasaron del año dada una fecha determinada"""
     if (esValido(dia,mes,año)):
         dias = dia
         for i in range(0,mes-1):
@@ -70,8 +105,18 @@ def cuantosDiasVanAño(dia,mes,año):
     else:
         return "La fecha no es valida"
 
+
+
 def distancianEntreDosFechas(dia1,mes1,año1,dia2,mes2,año2):
-    """Calcula la distancia entre dos fechas y la devuelve en dias, meses y años"""
+    """Recibe:
+                   dia1:<int>
+                   mes1:<int>
+                   año1:<int>
+                   dia2:<int>
+                   mes2:<int>
+                   año2:<int>
+
+               Devuelve distancia entre las dos fechas dadas en dias meses y años"""
 
     if esValido(dia1,mes1,año1) and esValido(dia2,mes2,año2):
 
