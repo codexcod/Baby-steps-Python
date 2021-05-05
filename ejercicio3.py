@@ -3,7 +3,9 @@ calcular su factorial."""
 
 def calcularFactorial(n):
 
-    """Calcula el factorial de un numero n"""
+    """Recibe:
+                n:<int>
+            Devuelve el factorial de unnumero n"""
 
     resultado = n
     for i in range(1 , n):
