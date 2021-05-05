@@ -8,7 +8,10 @@ devolver 'USB'.
 devolver 'Antes ayer'"""
 
 def mostrarSiglasDeCadena(cadena):
-    """Convierte una cadena de texto en siglas usando las primeras letras"""
+    """Recibe:
+                cadena:<string>
+
+                Devuelve una cadena de texto en siglas usando las primeras letras"""
     palabras = cadena.split(" ")
     resultado=""
 
@@ -17,8 +20,12 @@ def mostrarSiglasDeCadena(cadena):
 
     return resultado.upper()
 
+
 def mostrarMayusculaAlPrimero(cadena):
-    """Convierte a todas las primeras letras de cada palabra en mayuscula"""
+    """Recibe:
+                cadena:<string>
+
+                Devuelve la cadena conviertiendo a todas las primeras letras de cada palabra en mayuscula"""
     palabras = cadena.split(" ")
 
     resultado = ""
@@ -29,8 +36,12 @@ def mostrarMayusculaAlPrimero(cadena):
 
     return resultado
 
+
 def mostrarPalabrasConA(cadena):
-    """Solo muestra las palabras de la cadena que empiezen con a"""
+    """Recibe:
+                cadena:<string>
+
+                Devuelve una cadena mostrando las palabras de la cadena que empiezen con a"""
     palabras = cadena.split(" ")
 
     resultado = ""
