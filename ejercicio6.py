@@ -4,7 +4,12 @@ grande que se puede obtener entre ellos (8 = −2 × −4) """
 
 
 def calcularMayorProducto(n1,n2,n3,n4):
-    """Dados 4 numeros devuelve el mayor prducto entre 2 de esos numeros"""
+    """Recibe:
+                   n1:<int>/<float>
+                   n2:<int>/<float>
+                   n3:<int>/<float>
+                   n4:<int>/<float>
+               Devuelve el mayor producto entre dos numeros, dados n1, n2 ,n3 y n4"""
 
     mayorProducto = 0
 
@@ -21,14 +26,13 @@ def calcularMayorProducto(n1,n2,n3,n4):
     if (producto > mayorProducto):
         mayorProducto = producto
 
-    return (mayorProducto)
+    return "{0:.2f}".format(mayorProducto)
 
 
 def pedirNumeros():
-    """Funcion que printea la funcion anterior"""
+    """Pide el ingrso de los 4 numeros"""
 
     print("Calcular el mayor productos dados 4 numeros")
-    resultado = calcularMayorProducto(int(input("Ingrese el primer numero : ")),int(input("Ingrese el segundo numero : ")),int(input("Ingrese el tercer numero : ")),int(input("Ingrese el cuarto numero : ")))
-    print(f"El mayor producto es : {resultado}")
-
+    resultado = calcularMayorProducto(float(input("Ingrese el primer numero : ")),float(input("Ingrese el segundo numero : ")),float(input("Ingrese el tercer numero : ")),float(input("Ingrese el cuarto numero : ")))
+    return (f"El mayor producto es : {resultado}")
 
