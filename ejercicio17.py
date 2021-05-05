@@ -15,7 +15,14 @@ alred@ del medio@ STOP Voy a almor@ STOPSTOP"."""
 
 
 def procesarTelegrama(frase,cantidadMaxima,costoLargo,costoCorto):
-    """Procesa un telegrama agragando utilizando los parametros de letrasMaximas y su precio dadas"""
+    """Recibe:
+                       frase:<str>
+                       cantidadMaxima:<int>
+                       costoLargo:<int>/<float>
+                       costoCorto:<int>/<float>
+
+                   Procesa un telegrama agragando utilizando los parametros de letrasMaximas y su precio dadas"""
+
     palabras = frase.split(" ")
     palabras[-1] = palabras[-1].rstrip(".")
 
