@@ -1,13 +1,19 @@
+"""1. Escribir un programa que pregunte al usuario:
+2. Dos números, y luego muestre el producto."""
 
-def pedirProducto(num1,num2):
+def producto(num1,num2):
+    """Recibe:
+            num1: <int>/<float>
+            num2: <int>/<float>
+        Devuelve el producto entre los dos numeros dados"""
 
-    producto = num1 * num2
-    print(f"El producto de los dos numero es: {producto}")
+    return "{0:.2f}".format(num1 * num2)
 
 
-pedirProducto(int(input("Ingrese un primer numero ")),int(input("Ingrese un segundo numero ")))
+numero1 = float((input("Ingrese un primer numero ")))
+numero2 = float((input("Ingrese un segundo numero ")))
 
-
+print(f"El producto de los dos numero es: {producto(numero1,numero2)}")
 
 
     
