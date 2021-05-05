@@ -6,14 +6,21 @@ devolver ['papa', 'a', 'día', 'buen', 'Di'].
 modifique la lista dada para invertirla, sin usar listas auxiliares"""
 
 def invertirListaConAuxiliar(lista):
-    """Dada una lista devuelve una nueva lista com la primera lista invertida"""
+    """Recibe:
+                lista:<list>
+
+                Devuelve una nueva lista con la primera lista invertida"""
     resultado = []
     for i in range(len(lista)-1,-1,-1):
         resultado.append(lista[i])
     return resultado
 
 def invertirLista(lista):
-    """Dada una lista devuelve la lista invertida"""
+    """Recibe:
+                lista:<list>
+
+                Devuelve la lista invertida"""
+
     cantidad = len(lista)
     for i in range(cantidad):
         lista.append(lista[cantidad-i-1])
