@@ -13,8 +13,7 @@
 </h1>
 
 <h1 align ="center">
-   
-<img src="https://phoneky.co.uk/thumbs/screensavers/down/anime/charmander_rh0UXUlh.gif" width=200 height=200>
+  
 
 </h1>
 
